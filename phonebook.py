@@ -11,17 +11,19 @@ with open('phonebook.pickle', 'rb') as fh:
     #you can access keys and values in the this dictionary
     # print(data)
 
-# Print out menu and ask for an input 1-5
-menu = int(input("\nElectronic Phone Book \n********************** \n\n 1. Look up an entry \n 2. Set an entry \n 3. Delete an entry \n 4. List all entries \n 5. Quit \n\n What do you want to do (1-5?) "))
 
-# Menu Option #1: If they choose to look up an entry, you will ask them for the person's name, and then look up the person's phone number by the given name and print it to the screen.
+
+
 while True:
+    # Print out menu and ask for an input 1-5
+    menu = int(input("\nElectronic Phone Book \n********************** \n\n 1. Look up an entry \n 2. Set an entry \n 3. Delete an entry \n 4. List all entries \n 5. Quit \n\n What do you want to do (1-5?) "))
+# Menu Option #1: If they choose to look up an entry, you will ask them for the person's name, and then look up the person's phone number by the given name and print it to the screen.    
     if menu == int("1"):
         # Need to make it so the name will have a first letter capital by using .capitalize
         name = input("\n What is the person's name? ").capitalize()
         if name in phonebook_dict:
             print(f"\n {name}'s phone number is {phonebook_dict[name]}\n")
-        break    
+        pass 
 # Menu Option #2: If they choose to set an entry, you will prompt them for the person's name and the person's phone number
 
     if menu == int("2"):
